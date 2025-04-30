@@ -1,23 +1,159 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+    <title>Reviews Section</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <load src="./partials/header.html" icon-path="img/sprite.svg#logo" />
+    <section class="reviews-section">
+      <div class="container">
+        <h2 class="reviews-title">REVIEWS</h2>
 
-    <main>
-      <!-- Loads the specified .html file -->
-      <load src="./partials/vite-promo.html" />
-      <load src="./partials/badges.html" />
-    </main>
+        <!-- Swiper контейнер -->
+        <div class="swiper reviews-swiper">
+          <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+              <div class="review-card">
+                <p class="review-text">
+                  Work with was extraordinary! He turned out to be a very
+                  competent and responsible specialist. The projects were
+                  completed on time and the result exceeded my expectations
+                </p>
+                <div class="reviewer">
+                  <div class="reviewer-avatar">
+                    <img
+                      src="./img/natalia-shevchenko.png"
+                      srcset="
+                        ./img/natalia-shevchenko.png    1x,
+                        ./img/natalia-shevchenko@2x.png 2x
+                      "
+                      alt="Natalia Shevchenko"
+                      class="avatar-img"
+                    />
+                  </div>
+                  <p class="reviewer-name">Natalia Shevchenko</p>
+                </div>
+              </div>
+            </div>
 
-    <load src="./partials/footer.html" />
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+              <div class="review-card">
+                <p class="review-text">
+                  I have the honor to recommend him as an exceptional
+                  professional in his field. His knowledge and expertise are
+                  undeniable. Cooperation with him always brings impressive
+                  results.
+                </p>
+                <div class="reviewer">
+                  <div class="reviewer-avatar">
+                    <img
+                      src="./img/dmytro-nazarenko.png"
+                      srcset="
+                        ./img/dmytro-nazarenko.png    1x,
+                        ./img/dmytro-nazarenko@2x.png 2x
+                      "
+                      alt="Dmytro Nazarenko"
+                      class="avatar-img"
+                    />
+                  </div>
+                  <p class="reviewer-name">Dmytro Nazarenko</p>
+                </div>
+              </div>
+            </div>
 
-    <script type="module" src="./main.js"></script>
+            <!-- Додаткові слайди для демонстрації функціональності -->
+            <div class="swiper-slide">
+              <div class="review-card">
+                <p class="review-text">
+                  The level of professionalism and attention to detail is
+                  outstanding. I'm extremely satisfied with the quality of work
+                  and would definitely recommend to anyone looking for reliable
+                  services.
+                </p>
+                <div class="reviewer">
+                  <div class="reviewer-avatar">
+                    <img
+                      src="./img/noname.png"
+                      alt="Oleksandr Petrenko"
+                      class="avatar-img"
+                    />
+                  </div>
+                  <p class="reviewer-name">Oleksandr Petrenko</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="review-card">
+                <p class="review-text">
+                  Incredible experience working together! The communication was
+                  clear, deadlines were met, and the final product exceeded all
+                  expectations. Will definitely work together again.
+                </p>
+                <div class="reviewer">
+                  <div class="reviewer-avatar">
+                    <img
+                      src="./img/noname.png"
+                      alt="Maria Kovalenko"
+                      class="avatar-img"
+                    />
+                  </div>
+                  <p class="reviewer-name">Maria Kovalenko</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Навігаційні стрілки поза контейнером -->
+      <div class="navigation-buttons">
+        <button class="nav-button prev-button" id="prev-button">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M15 18L9 12L15 6"
+              stroke="black"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <button class="nav-button next-button" id="next-button">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M9 18L15 12L9 6"
+              stroke="black"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./main.js"></script>
   </body>
 </html>
